@@ -4,9 +4,14 @@ branches:
   only:
   - master
   
+services:
+  - docker
+
 language: java
 jdk:
 - oraclejdk8
 
 script:
 - "./mvnw clean package"
+- docker build -t hrazaf6/spring-petclinic:$TRAVIS_COMMIT .
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push hrazaf6/spring-petclinic:$TRAVIS_COMMIT
