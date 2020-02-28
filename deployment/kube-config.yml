@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data:
+    server: https://k8s-demo-dns-a36a9079.hcp.eastus.azmk8s.io:443
+  name: "k8s-demo"
+contexts:
+- context:
+    cluster: "k8s-demo"
+    user: "clusterUser_k8s-demo_k8s-demo"
+  name: "k8s-demo"
+current-context: "k8s-demo"
+kind: Config
+users:
+- name: "clusterUser_k8s-demo_k8s-demo"
+  user:
+    client-certificate-data:
+    client-key-data:
