@@ -34,12 +34,6 @@ pipeline {
                 sh "./mvnw package"
             }
         }
-        stage('Publish') { // Compile and do unit testing
-            steps {
-                // run Gradle to execute compile and unit testing
-                sh "aws s3 cp target/spring-petclinic-2.1.2.BUILD-SNAPSHOT.jar s3://cloudilm-artifacts"
-            }
-        }
     }
     post {
          failure {
