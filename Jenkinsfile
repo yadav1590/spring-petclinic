@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'Slave 2'}
     triggers {
-        pollSCM('* * * * 1-5')
+        pollSCM('* * * * *')
     }
     stages {
         stage('Cleanup') { // Compile and do unit testing
