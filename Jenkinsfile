@@ -1,7 +1,6 @@
 pipeline {
     agent {label 'agent1'}
-    triggers {
-    }
+   
     stages {
         stage('Cleanup') { // Compile and do unit testing
             steps {
