@@ -13,7 +13,7 @@ pipeline {
         stage('Source') { // Get code
             steps {
                 // get code from our Git repository
-                git 'https://github.com/hrazaf6/spring-petclinic.git'
+                git 'https://github.com/yadav1590/spring-petclinic.git'
             }
         }
         stage('Compile') { // Compile and do unit testing
