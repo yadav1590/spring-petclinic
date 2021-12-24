@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'agent1'}
+    agent {label 'Linux_Based'}
    
     stages {
         stage('Cleanup') { // Compile and do unit testing
