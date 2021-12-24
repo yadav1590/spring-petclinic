@@ -1,6 +1,8 @@
 pipeline {
     agent {label 'Linux_Based'}
-   
+    tools {
+        jdk "java8"
+    }
     stages {
         stage('Cleanup') { // Compile and do unit testing
             steps {
